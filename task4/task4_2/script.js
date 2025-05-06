@@ -1,0 +1,1 @@
+const number = prompt("Enter 3 digit number:")
