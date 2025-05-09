@@ -1,51 +1,56 @@
 const birthday = prompt("Enter your birth year:");
-const city = prompt("Enter your city:");
-const sport = prompt("Enter your favourite sport:");
 
 let message = "";
 
-
-if (birthday) {
+if (!birthday) {
+    alert("Too bad you didn't enter your birth year.");
+} else {
     const age = Number(birthday);
     message += `Your age: ${age}\n`;
-} else {
-    message += "Too bad you didn't enter your birth year.\n";
-}
+    const city = prompt("Enter your city:");
 
 
-if (city) {
-    switch (city) {
-        case "kiev":
-            message += "You are living in the capital of Ukraine.\n";
-            break;
-        case "washington":
-            message += "You are living in the capital of the USA.\n";
-            break;
-        case "london":
-            message += "You are living in the capital of the UK.\n";
-            break;
-        default:
-            message += `You are living in ${city}.\n`;
-    }
-} else {
-    message += "Too bad you didn't enter your city.\n";
-}
-
-
-if (sport) {
-    const champions = {
-        football: "Messi",
-        boxing: "Usyk",
-        tennis: "Djokovic"
-    };
-    const champ = champions[sport];
-    if (champ) {
-        message += `Cool! Do you want to become like ${champ}?`;
+    if (!city) {
+        alert("Too bad you didn't enter your city.");
     } else {
-        message += `Your favorite sport is ${sport}.`;
+        switch (city) {
+            case "kiev":
+                message += "You are living in the capital of Ukraine.\n";
+                break;
+            case "washington":
+                message += "You are living in the capital of the USA.\n";
+                break;
+            case "london":
+                message += "You are living in the capital of the UK.\n";
+                break;
+            default:
+                message += `You are living in ${city}.\n`;
+        }
     }
-} else {
-    message += "Too bad you didn't enter your favorite sport.";
+}
+
+const sport = prompt("Enter your favourite sport:");
+
+if (!sport) {
+    alert("Too bad you didn't enter your favorite sport.");
+}
+else
+    {
+        switch (sport) {
+            case "football":
+                message += "Do you want be a Messi?\n";
+                break;
+            case "boxing":
+                message += "Do you want be a Usyk?.\n";
+                break;
+            case "racer":
+                message += "Do you want be a Shumacher?.\n";
+                break;
+            default:
+                message += `Your favourite sport ${sport}\n`;
+                break;
+        }
+
 }
 
 alert(message);
