@@ -1,3 +1,7 @@
+// const uahCurrencies = 1;
+// const usdCurrencies = 41;
+// const eurCurrencies = 46;
+
 let again = true;
 
 while (again) {
