@@ -1,36 +1,25 @@
-// const uahCurrencies = 1;
-// const usdCurrencies = 41;
-// const eurCurrencies = 46;
+const digit = Number(prompt("Enter a digit:"));
 
-let again = true;
 
-while (again) {
-    let currency = prompt("Enter currency (uah, usd, euro):").toLowerCase();
 
-    let rate;
-    let symbol;
+if(isNaN(digit) || digit< 1 || digit> 100){
 
-    if (currency === "uah") {
-        rate = 41;
-        symbol = "₴";
-    }else if (currency === "euro") {
-        rate = 0.89;
-        symbol = "€";
-    } else if (currency === "usd") {
-        rate = 1;
-        symbol = "$";
-    } else {
-        alert("Invalid currency!");
-        continue;
+    alert("Enter correct digit:");
+
+}else{
+    let result = "";
+
+    for (let n = 1; n <= 100; n++) {
+        if (n * n <= digit) {
+            result += n + "\n";
+        } else {
+            break;
+        }
     }
 
-    let answer = "";
-    for (let dollars = 10; dollars <= 100; dollars += 10) {
-        let value = dollars * rate;
-        answer += `${dollars}$ = ${value}${symbol}\n`;
-    }
+    alert("Numbers whose squares do not overlap DIGIT:\n" + result);
 
-    alert(answer);
 
-    again = confirm("Do you want to convert another currency?");
 }
+
+
