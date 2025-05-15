@@ -14,4 +14,4 @@ function foo(array) {
 
 const result = foo(array);
 
-console.log(result);
+console.log(result); // Виведе: 3.5
