@@ -4,10 +4,9 @@ function button() {
     const textBlock = document.getElementById("text");
 
     if (isColored) {
-        textBlock.style.color = "black"; // початковий колір
+        textBlock.style.color = "black";
     } else {
-        textBlock.style.color = "red"; // змінений колір
-    }
+        textBlock.style.color = "red";
 
     isColored = !isColored;
-}
+}}
