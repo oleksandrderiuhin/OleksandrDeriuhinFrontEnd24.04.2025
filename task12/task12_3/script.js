@@ -1,6 +1,6 @@
 const containerUl = document.getElementById('list');
 const inputField = document.getElementById('newTaskInput');
-const addTaskBtn = document.getElementById('addTaskBtn');
+
 
 
 containerUl.addEventListener('click', function(event) {
@@ -16,19 +16,23 @@ inputField.addEventListener('change', (e) => {
     if (inputText === '') return;
 
     const li = document.createElement("li");
-    li.innerHTML = `<strong>${inputText}</strong> <button>Видалити</button>`;
+    const strong = document.createElement("strong");
+    strong.textContent = inputText;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Видалити";
+
+    li.appendChild(strong);
+    li.appendChild(document.createTextNode(" "));
+    li.appendChild(deleteBtn);
+
     containerUl.appendChild(li);
-    addTaskBtn.value = "";
+
+    inputField.value = "";
 
 })
 
-function checkIfEmpty() {
-    if (containerUl.children.length === 0) {
-        document.getElementById("emptyMessage").style.display = "block";
-    } else {
-        document.getElementById("emptyMessage").style.display = "none";
-    }
-}
+
 
 
 
