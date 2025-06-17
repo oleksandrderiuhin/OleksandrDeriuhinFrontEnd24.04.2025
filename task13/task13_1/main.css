@@ -1,0 +1,9 @@
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+}
+input, textarea {
+    display: block;
+    margin-bottom: 5px;
+}
