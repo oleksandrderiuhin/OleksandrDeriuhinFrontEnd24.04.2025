@@ -8,10 +8,14 @@ function saveTasks() {
 }
 
 function renderTasks() {
-    taskList.innerHTML = '';
+
+    while (taskList.firstChild) {
+        taskList.removeChild(taskList.firstChild);
+    }
+
     tasks.forEach((task, index) => {
         const li = document.createElement('li');
-        li.className = task.completed ? 'completed' : '';
+        if (task.completed) li.classList.add('completed');
 
         const span = document.createElement('span');
         span.textContent = task.text;
