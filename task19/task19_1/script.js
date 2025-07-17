@@ -22,5 +22,5 @@ async function getWeather() {
     }
 }
 
-// завантажити погоду одразу при запуску
+
 getWeather();
