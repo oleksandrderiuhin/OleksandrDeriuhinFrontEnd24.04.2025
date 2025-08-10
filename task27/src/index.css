@@ -1,0 +1,30 @@
+
+:root {
+  --bg-light: #ffffff;
+  --text-light: #111827;
+  --bg-dark: #121212;
+  --text-dark: #f3f4f6;
+}
+
+[data-theme="light"], .light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+[data-theme="dark"], .dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+
+.app-header a {
+  color: inherit;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+
+.theme-toggle {
+  cursor: pointer;
+}
+
