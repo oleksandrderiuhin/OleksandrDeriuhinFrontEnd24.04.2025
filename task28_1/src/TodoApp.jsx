@@ -5,7 +5,6 @@ import * as Yup from "yup";
 const TodoApp = () => {
     const [todos, setTodos] = useState([]);
 
-    // Валідація
     const validationSchema = Yup.object({
         task: Yup.string()
             .min(5, "Мінімум 5 символів")
@@ -16,7 +15,7 @@ const TodoApp = () => {
         <div className="app">
             <h1>TODO List з Formik</h1>
 
-            {/* Форма */}
+
             <Formik
                 initialValues={{ task: "" }}
                 validationSchema={validationSchema}
@@ -40,7 +39,7 @@ const TodoApp = () => {
                 )}
             </Formik>
 
-            {/* Список */}
+
             <ul>
                 {todos.map((todo, index) => (
                     <li key={index}>{todo}</li>
